@@ -1,5 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -22,7 +23,7 @@ public class Main {
                     String encryptFilePath = scanner.nextLine();
                     System.out.println("Введите ключ (сдвиг):");
                     int encryptShift = scanner.nextInt();
-                    scanner.nextLine();  // Чистим буфер
+                    scanner.nextLine();
                     try {
                         String content = FileHandler.readFile(encryptFilePath);
                         String encryptedContent = CaesarCipher.encrypt(content, encryptShift);
